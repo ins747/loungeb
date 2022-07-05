@@ -1,0 +1,496 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+* {margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {
+    text-decoration: none; color: #111; display: block;
+    font-family: 'Noto Sans KR', sans-serif;}
+header, section, footer {
+    width: 100%;
+    float: left;
+}
+/* 모든 영역에 box-sizing 설정 */
+header, section, footer, div {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 브라우저의 가운데 정렬 */
+.center_box {
+    width: 1300px;
+    margin: 0 auto;
+}
+header {
+    height: 130px;
+}
+
+/* up_area */
+header .up_area {
+    width: 100%;
+    height: 40px;
+    background-color: #111;
+}
+header .up_area .right_menu {
+    float: right;
+}
+header .up_area .right_menu ul li {
+    float: left;
+}
+header .up_area .right_menu ul li a {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* .down_area */
+header .down_area .logo {
+    float: left;
+    padding-top: 5px;
+    width: 160px;
+    height: 80px;
+}
+header .down_area nav {
+    float: right;
+    z-index:11;
+    position: relative;
+
+}
+header .down_area nav > ul > li {
+    float: left;
+    padding: 10px 0;
+}
+header .down_area nav > ul > li > a {
+   padding: 20px 0;
+   margin-right: 70px;
+   padding-bottom: 30px;
+   font-size: 18px;
+   /* 자식객체 :after의 위치 설정할 때 기준이 a태그임 */
+   position: relative;
+   /* 마우스오버할 때 밑줄이 글자길이만큼만 그려짐 */
+   display: inline-block;
+}
+header .down_area nav > ul > li > a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #111;
+    left: 50px;
+    bottom:25px;
+    transition: all 0.5s;
+}
+header .down_area nav > ul > li> a:hover:after {
+    width: 100%;
+    left: 0;
+}
+header .down_area nav .sub {
+    /* display: none; */
+    background-color: white;
+    border-top: 3px solid #111;
+    /* 서서히 나타나는 애니메이션 */
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    /* 애니메이션 */
+    transition: all 0.5s;
+}
+header .down_area nav .sub li a {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+header .down_area nav .sub li a:hover {
+    background-color: #efefef;
+}
+header .down_area nav > ul > li:hover .sub {
+    /* display: block; */
+    height: auto;
+    opacity: 1;
+}
+
+
+.swiper-slide{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 570px;
+}
+#visual a{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+    width: 600px;
+}
+#visual a h1{
+    font-family: 'Joan', serif;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 8px;
+}
+#visual a h3{
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+#visual a p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.s1{
+    background-image: url(../img/Loungb1.jpg);
+    padding-top: 150px;
+    padding-left: 455px;
+}
+.s2{
+    background-image: url(../img/Loungb2.jpg);
+    padding-top: 150px;
+    padding-left: 480px;
+}
+.s3{
+    background-image: url(../img/Loungb3.jpg);
+    padding-top: 150px;
+    padding-left: 830px;
+}
+
+
+/* section */
+section {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+section#visual {
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+section#banner .movie {
+    width: 678px;
+    height: 380px;
+    margin-right: 27px;
+    float: left;
+}
+
+/* #banner_right */
+section#banner .banner_right {
+    width: 595px;
+    height: 380px;
+    float: left;
+}
+section#banner .banner_right ul li {
+    float: left;
+    width: 285px;
+    height: 180px;
+    background-image: url(../img/bg.png);
+}
+section#banner .banner_right ul li:hover h4{
+    color: rgb(69, 25, 109);
+}
+section#banner .banner_right ul li:hover .des p{
+    color: #444;
+}
+section#banner .banner_right ul li .pic {
+    position: relative;
+    width: 100%;
+}
+section#banner .banner_right ul li .des {
+    position: absolute;
+    color: #111;
+    padding: 25px;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+section#banner .banner_right ul li .des h4 {
+    font-size: 22px;
+}
+section#banner .banner_right ul li .des p {
+    font-size: 20px;
+    color: #777;
+}
+section#banner .banner_right ul li .des img {
+    width: 40px;
+    padding-bottom: 35px;
+}
+section#banner .banner_right ul li:first-child {
+    margin-right:25px;
+    margin-bottom: 20px;
+}
+section#banner .banner_right ul li:nth-child(2) {
+    margin-right:0;
+    margin-bottom: 20px;
+}
+section#banner .banner_right ul li:nth-child(3) {
+    margin-right:25px;
+    margin-bottom: 20px;
+}
+section#banner .banner_right ul li:last-child {
+    margin-right:0;
+    margin-bottom: 0;
+}
+
+/* #list */
+section#list {
+    background-image: url(../img/background.png);
+    /* 배경이미지를 고정시킴 */
+    background-attachment: fixed;
+    /* height: 640px; */
+}
+section#list .center_box .subject img {
+    margin: 0 540px;
+}
+/* h4 {text-align: center; font-size:22px} */
+
+
+section#list .list_box ul li {
+    margin-top: 60px;
+}
+section#list .list_box ul li h4 {
+    padding-top: 30px;
+    text-align: center;
+    font-size:22px;
+}
+section#list .list_box ul li p {
+    text-align: center;
+    font-size:18px;
+    padding-top: 5px;
+    color: #777;
+}
+section#list .center_box .list_box ul li {
+    float: left;
+    margin-right: 27px;
+}
+section#list .center_box .list_box ul li:last-child {
+    margin-right: 0;
+}
+section#list .center_box .list_box ul li .photo {
+    width: 238px;
+    height: 238px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px; color: #aaa;
+    }
+/* .photo 안의 이미지 조금 커지는 애니메이션 */
+section#list .list_box ul li .photo img {
+    width: 238px;
+    transform: scale(1,1);
+    transition: all 0.5s;
+}
+section#list .list_box ul li:hover .photo img {
+    transform: scale(1.1,1.1);
+}
+section#list .list_box ul li:hover h4{
+    color: rgb(69, 25, 109);
+}
+section#list .list_box ul li:hover p{
+    color: #444;
+}
+
+/* #event */
+section#event .center_box .e_left {
+    background-image: url(../img/ss_bag_trend.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 830px;
+    height: 550px;
+    float: left;
+    margin-right: 28px;
+}
+section#event .center_box .e_left a {
+    text-align: center;
+    width: 400px;
+    /* border: 1px solid red; */
+    padding-top: 115px;
+    padding-left: 15px;
+}
+section#event .center_box .e_left a h1{
+    font-family: 'Joan', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 55px;
+    letter-spacing: 3px;
+}
+section#event .center_box .e_left a h1 span{
+    font-weight: 400;
+    font-family: 'Joan', serif;
+    font-size: 65px;
+}
+section#event .center_box .e_left a h3{
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+section#event .center_box .e_left a p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+section#event .center_box .e_right .event1 {
+    width: 442px;
+    height: 380px;
+    overflow: hidden;
+}
+section#event .center_box .e_right img {
+    width: 442px;
+    transform: scale(1,1);
+    transition: all 0.5s;
+}
+section#event .center_box .e_right .event1:hover img {
+    transform: scale(1.1,1.1);
+}
+
+section#event .center_box .e_right .event2 {
+    margin-top: 26px;
+    position: relative;
+    overflow: hidden;
+}
+section#event .center_box .e_right .event2 .over {
+    position: absolute;
+}
+section#event .center_box .e_right .event2:hover .over{
+    top: 0px;
+    right: 0;
+}
+section#event .center_box .e_right .event2:hover {
+    border: 1px solid #111;
+    width: 442px;
+    height: 148px;
+}
+
+
+/* #notice */
+section#notice .center_box .news {
+    float: left;
+    width: 630px;
+    height: 300px;
+    margin-right: 40px;
+}
+section#notice .center_box .recruit {
+    float: left;
+    width: 630px;
+    height: 300px;
+}
+section#notice .center_box .title {
+    width: 100%;
+    float: left;
+    padding:25px;
+    height: 75px;    
+    margin-bottom: 10px;
+}
+section#notice .center_box .title h1 {
+    float: left;
+    /* 글자가 줄바꿈하지 않도록 */
+    white-space: nowrap;
+}
+section#notice .center_box .title a {
+    float: right;
+    width: 34px;
+}
+section#notice .center_box .con1 {
+    float: left;
+    width:100%;
+    text-align: right;
+}
+section#notice .center_box .con1 li {
+    font-size: 20px;
+    padding: 23px 35px 23px 25px;
+    border-bottom: 1px solid #efefef;
+}
+section#notice .news .con1 ul li a span {
+    display: block;
+}
+section#notice .center_box .news .con1 ul li p {
+    float: left;
+}
+section#notice .center_box .news .con1 ul li:hover p{
+    color: #aaa;
+}
+section#notice hr {
+    background-color: #ddd;
+    border: none;
+    height: 1px;
+    width: 100%;
+}
+section#notice .center_box .con2 {
+    position: relative;
+    overflow: hidden;
+}
+section#notice .center_box .con2 .over {
+    position: absolute;
+
+}
+section#notice .center_box .con2:hover {
+    border: 1px solid #111;
+}
+section#notice .center_box .con2:hover .over{
+    top: 0;
+}
+
+/* footer */
+footer {
+    height: 220px;
+    background-color: #f8f8f8;
+    padding: 30px 0;
+}
+footer .center_box .f_logo {
+    float: left;
+    width: 160px;
+    height: 80px;
+    margin-right: 46px;
+    padding-top: 40px;
+    margin-left: 20px;
+}
+footer .center_box .addr {
+    float: left;
+}
+footer .center_box .addr .info ul li {
+    float: left;
+    padding-bottom: 7px;
+}
+footer .center_box .addr .info ul li a:after {
+    content: "|";
+    margin-left: 10px;
+}
+footer .center_box .addr .info ul li:last-child a:after {
+    content: "";
+}
+footer .center_box .addr .info ul li a{
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 0;
+    color: #444;
+}
+footer .center_box .addr .info ul li:last-child {
+    float: none;
+    border: none;
+}
+footer .center_box .addr address {
+    font-style: normal;
+    /* .info영역의 li에 적용된 float:left를 address에서 적용되지 않게 함 */
+    clear: both;
+    color: #111;
+    font-size: 14px;
+}
+footer .center_box .sns {
+    float: right;
+}
+footer .center_box .sns ul li {
+    float: left;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+footer .center_box .sns ul li img {
+    width: 64px;
+    height: 64px;
+}
