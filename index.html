@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>라운지비</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+    <!-- 스와이퍼(swiper) css를 cdn으로 연결 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <!-- 외부 css -->
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- 스와이퍼(swiper) js를 cdn으로 연결-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- 외부 js -->
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -89,7 +98,29 @@
         </header>
         <section id="visual">
             <!-- 슬라이드 -->
-            <img src="img/visual1.png" alt="daily cardigan">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide s1">
+                      <a href="#">
+                          <img src="img/visual1.png" alt="daily cardigan">
+                      </a>
+                  </div>
+                  <div class="swiper-slide s2">
+                    <a href="#">
+                        <img src="img/visual2.png" alt="new very peri">
+                    </a>
+                  </div>
+                  <div class="swiper-slide s3">
+                    <a href="#">
+                        <img src="img/visual3.png" alt="spring's outer">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        </div>
         </section>
         <section id="banner">
             <div class="center_box">
